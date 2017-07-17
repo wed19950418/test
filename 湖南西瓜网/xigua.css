@@ -1,0 +1,258 @@
+/* css reset css初始化代码 */
+body {margin:0; padding:0; font:12px/1.5 "微软雅黑",\5b8b\4f53,Arial,sans-serif; color: #3b3b3b;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+body {
+    min-width: 1350px;
+}
+
+.w {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.top {
+    height: 30px;
+    background-color: #eee;
+    border-bottom: 1px solid #D8D8D8;
+}
+.top-in {
+    height: 30px;
+
+}
+.top-in p {
+    float: right;
+    background: url(images/1.png) no-repeat left center;
+    line-height: 30px;
+    padding-left: 15px;
+}
+.top-in a {
+    text-decoration: underline;
+}
+
+
+.head {
+    height: 80px;
+    overflow: hidden;
+}
+.logo {
+    background: url(images/logo1.png) no-repeat;
+    margin-top: 15px;
+    float: left;
+}
+.logo a {
+    width: 50px;
+    height: 47px;
+    display: block;
+    text-indent: -2000px;
+    float: left;
+}
+.head span {
+    float: left;
+    line-height: 80px;
+    font-size: 20px;
+}
+.search {
+    float: right;
+}
+.search input {
+    width: 247px;
+    height: 28px;
+    margin-top: 30px;
+    margin-right: 10px;
+    padding-left: 5px;
+    color: #CCCCCC;
+    border: 1px solid #DDDDDD;
+    outline: none;
+    background: url(images/2.png) no-repeat right center;
+}
+
+
+.nav {
+    height: 35px;
+    background: #E0E0E0;
+    margin-bottom: 10px;
+}
+.nav .first-li {
+    width: 98px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    background: #19B4EA;
+}
+.nav li {
+    float: left;
+    width: 145px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    border-right: 1px solid #fff;
+}
+.nav .telephone {
+    border-right: 0;
+}
+
+.banner {
+    width: 980px;
+    height: 350px;
+    margin-bottom: 22px;
+    position: relative;
+}
+.diandian {
+    position: absolute;
+    left:50%;
+    margin-left: -6px;
+    bottom: 10px;
+}
+
+.main {
+    background: ;
+    height: 548px;
+}
+.news {
+    height: 232px;
+} 
+.show {
+    width: 600px;
+    float: left;
+    margin-right: 5px;
+}
+.show p{
+    font-size: 14px;
+    color:#7A7F81;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.show li {
+    float: left;
+    border: 1px solid #eee;
+    margin-right: 17px;
+}
+.show .right {
+    margin-right: 0;
+}
+.changsha span  {
+    display: inline-block;
+    width: 145px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.news-centent {
+    height: 234px;
+    float: left;
+    color: #A50000;
+}
+.news-centent p {
+    font-size: 14px;
+    color:#7A7F81;
+    padding-bottom: 14px;
+    font-weight: 700;
+}
+.news-centent ul {
+    width: 362px;
+    float: left;
+    height: 38px;
+
+}
+.news-centent li {
+    border-bottom: 1px dashed #D1D1D1;
+    line-height: 38px;
+    font-size: 12px;
+
+}
+.news-centent span {
+    float: right;
+    color: #99AFD1;
+}
+
+.massage {
+    width: 980px;
+    height: 316px;
+}
+.conpany {
+    width: 600px;
+    float: left;
+    margin-top: 30px;
+}
+.conpany p {
+    font-size: 14px;
+    color:#7A7F81;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+}
+.conpany dl {
+    float: left;
+}
+.conpany dt {
+    float: left;
+    margin-right: 15px;
+}
+.conpany .pic  {
+    float: left;
+    background: url(images/img_company.jpg);
+    width: 121px;
+    height: 155px;
+}
+.conpany dd h4 {
+    font-size: 20px;
+    color: #313131; 
+}
+.conpany dd span {
+    font-size: 12px;
+    line-height: 24px;
+    color: #999999;
+}
+.massage a {
+    font-size: 14px;
+    color: #f00;
+    text-decoration: underline;
+}
+.us {
+    width: 358px;
+    height: 259px;
+    border: 1px solid #CBD1D3;
+    float: right;
+    background-color: #EFEFEF;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.us p {
+    font-size: 14px;
+    color:#7A7F81;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    font-weight: 700;
+}
+.us img {
+    float: left;
+}
+.us span {
+    float: right;
+    line-height: 38px;
+}
+
+.footer {
+    height: 121px;
+    background-color: #EBEBEB;
+}
+.footer-in {
+    padding-top: 43px;
+    line-height: 25px;
+}
+.footer-in p {
+    color: #AD99AD;
+}
