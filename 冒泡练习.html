@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+
+<script >
+
+//        while(true){
+//           var i = prompt("你爱我吗")
+//            if(i == "y"){
+//                document.write("我也是");
+//                break;
+//            }
+//        }
+//        var  arr = [1,2,3,4,5]
+//        var inner=0;
+//        var outer=0;
+//        for( var i=0;i<arr.length-1;i++){
+//            if(flag=true);
+//            for( var j=0;j<arr.length-1-i;j++){
+//                if( arr[j]>arr[j+1]){
+//                    flag=false;
+//                    var temp = arr [j];
+//                    arr[j]=arr[j+1];
+//                    arr[j+1]= temp;
+//                }
+//                inner++;
+//            }
+//            outer++;
+//            if(flag){
+//                break;
+//            }
+//        }
+//        console.log(arr);
+//        console.log(inner);
+//        console.log(outer);
+//    function getsum(x,y){
+//        var sum= 0;
+//        for(i=x;i <= y; i++){
+//            sum+=i;
+//        }
+//        return sum;
+//    }
+//     getsum(1,100)
+//         getsum(1,15)
+//        console.log(getsum(1,2));
+//        alert(getsum(1,2));
+//        document.write(getsum(1,2));
+//        var num = getsum(1,2)+3;
+//        console.log(num);
+//        function getarea(r){
+////            return  3.14*r*r
+//            var area= 3.14*r*r;
+//            return area;
+//        }
+//        console.log(getarea(10))
+//        function getpet (r){
+//            return 2*3.14*r;
+//        }
+//        console.log (getpet(10))
+//        function getmax(a,b){
+//            var sum;
+//            if(a>b){
+//                sum= a;
+//            }else  {
+//                sum= b;
+//            }
+//            return sum;
+//            var sum = a>b?a:b;
+//            return sum;
+//              return a>b?a:b;
+//        }
+//        console.log(getmax(5,678));
+//        function getmax(a,b){
+//            return a>b?a:b;
+//        }
+//        function getmax3(a,b,c){
+////            return (a>b?a:b)>c?(a>b?a:b):c;
+//            return getmax(getmax(a,b),c)   ;
+//        }
+//        console.log(getmax3(5,4,7));
+//        var arr = [56,65,32,63,57]
+//        function getmax(arr){
+//            var max= arr[0];
+//            for(var i=0;i<arr.length;i++){
+//                if(max < arr[i]){
+//                    max=arr[i];
+//                }
+//            }
+//            return max;
+//        }
+//        console.log(getmax(arr));
+//        var arr = [323,63,2,35,1]
+//        function getmin(arr){
+//            var min=arr[0]
+//            for(var i=0;i<arr.length;i++){
+//                if(min>arr[i]){
+//                    min=arr[i];
+//                }
+//            }
+//            return min;
+//        }
+////        console.log(getmin(arr));
+//        console.log(getmin([56,23,1,2]))
+//        var arr = [32,61,632,4632,463461,3]
+//console.log(arr);
+//        function reverse(arr){
+//            var newArr = []
+//            for(var i=arr.length-1;i>=0;i--){
+//                newArr[newArr.length]=arr[i];
+//            }
+//            return newArr;
+//        }
+//console.log(reverse(arr));
+//var arr = [1,2,3,4,5,6,7,8,9]
+//console.log(arr);
+//function resever(arr){
+//    var getsum=[]
+//    for(var i=arr.length-1;i>=0;i--){
+//        getsum[getsum.length]=arr[i];
+//    }
+//    return getsum;
+//}
+//console.log(resever(arr));
+//        var arr=[];
+//        for(var i=0;i<=100;i++){
+//            arr[arr.length]=i;
+//        }
+//        console.log(arr);
+//var arr=[];
+//for(var i=1;i<=100;i++){
+//    arr[arr.length]=i;
+//}
+//console.log(arr);
+//var arr=[];
+//for(var i=1;i<=100;i++){
+//    if(i%2!==0){
+//        arr[arr.length]=i;
+//    }
+//}
+//console.log(arr);
+//var arr=[];
+//for(var i=1;i<=100;i++){
+//    if(i%3===0){
+//        arr[arr.length]=i;
+//    }
+//}
+//console.log(arr);
+//var arr = [35,41,5,9,8]
+//        var max=arr[0];
+//        var maxIndex=0;
+//        for(var i=0;i<arr.length;i++){
+//            if(max<arr[i]){
+//                max=arr[i];
+//                maxIndex=i;
+//            }
+//        }
+//        console.log(max);
+//console.log(maxIndex);
+//var arr = [35,41,5,9,8];
+//        var min=arr[0];
+//var minIndex=0;
+//        for(var i=0;i<arr.length;i++){
+//            if(min>arr[i]){
+//                min=arr[i];
+//                minIndex=i;
+//            }
+//        }
+//        console.log(min);
+//        console.log(minIndex);
+//        var arr = [4,5,2,8,3]
+//        var max =arr[0]
+//        var maxIndex=0;
+//        var min =arr[0];
+//        var minIndex=0;
+//        for(i=0;i<arr.length;i++){
+//            if(max<arr[i]){
+//                max=arr[i]
+//                maxIndex=i;
+//            }
+//            if(min>arr[i]){
+//                min=arr[i];
+//                minIndex=i;
+//            }
+//        }
+//        console.log(max);
+//        console.log(maxIndex);
+//        console.log(min);
+//        console.log(minIndex);
+//        var arr=["a","bb","ccc","dddd"]
+//        var newArr= arr[0];
+//        for(var i=1;i<arr.length;i++){
+//            newArr=newArr+"|"+arr[i];
+//        }
+//        console.log(newArr);
+//var arr=["a","bb","ccc","dddd"]
+//        var newArr= [];
+//        for(i=0;i<arr.length;i++){
+//            newArr[newArr.length]=arr[i].length;
+//        }
+//        console.log(newArr);
+//        var arr= [2,6,8,3,0,5,3,0]
+//        var newArr=[]
+//        for(var i=0;i<arr.length;i++){
+//            if(arr[i]!==0){
+//                newArr[newArr.length]=arr[i];
+//            }
+//        }
+//        console.log(newArr);
+//var arr= [2,6,8,3,0,5,3]
+//console.log(arr);
+//var newArr=[]
+//for(var i=arr.length-1;i>=0;i--){
+//        newArr[newArr.length]=arr[i];
+//}
+//console.log(newArr);
+//var arr= [2,6,8,3,5,37]
+//var inner=0;
+//var out=0;
+//var flag=true;
+//        for(var i=0;i<arr.length-1;i++){
+//            for(var j=0;j<arr.length-1-i;j++){
+//                if(arr[j]>arr[j+1]){
+//                    flag=false;
+//                    var temp= arr[j];
+//                    arr [j]=arr[j+1];
+//                    arr[j+1]=temp;
+//                }
+//                inner++;
+//            }
+//            out++;
+//            if(flag){
+//                break;
+//            }
+//        }
+//        console.log(arr);
+//        console.log(inner);
+//        console.log(out);
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
