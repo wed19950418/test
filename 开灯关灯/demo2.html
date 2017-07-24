@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: #000 url(timg.jpg) no-repeat center 100px;
+		}
+		div {
+			width: 100px;
+			height: 30px;
+			background-color: rgba(255, 255, 255, .3);
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="click"></div>
+	<script>
+		var click = document.getElementById("click");
+		var xiaoming = true;
+		click.onclick = function() {
+			if (xiaoming) {
+				document.body.style.backgroundImage = "url(timg2.jpg)"
+			}else {
+				document.body.style.backgroundImage = "url(timg.jpg)"
+			}
+
+			xiaoming = !xiaoming
+		}
+	</script>
+</body>
+</html>
