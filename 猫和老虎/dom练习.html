@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<a href="#">a标签的默认行为就是跳转</a>-->
+<!--<a href="#" onclick="test(20)">未满18岁进入</a>-->
+<!--<a href="#" onclick="return false;">阻止默认行为</a>-->
+<!--<script>-->
+    <!--function test(age){-->
+        <!--if(age>18){-->
+            <!--alert("欢迎");-->
+        <!--}-->
+        <!--else {-->
+            <!--alert("禁止");-->
+        <!--}-->
+        <!--return false;-->
+    <!--}-->
+<!--</script>-->
+<!--<img src="images/kitty.png" onclick="changePic()" id="demo" alt=""/>-->
+<!--<script>-->
+    <!--function changePic(){-->
+        <!--var img=document.getElementById("demo");-->
+        <!--img.src="images/tiger.png";-->
+    <!--}-->
+<!--</script>-->
+<!--<input type="button" value="按钮"/>-->
+<!--<input type="button" value="按钮"/>-->
+<!--<input type="button" value="按钮"/>-->
+<!--<input type="button" value="按钮"/>-->
+<!--<script>-->
+<!--//        var inputs = document.getElementsByTagName("input");-->
+<!--//        inputs.onclick=function(){-->
+<!--//            alert("a");-->
+<!--//        };-->
+        <!--var inputs = document.getElementsByTagName("input");-->
+        <!--for(var i=0;i<inputs.length;i++){-->
+            <!--var input = inputs[i];-->
+            <!--input.onclick=function(){-->
+                <!--alert("a");-->
+            <!--};-->
+        <!--};-->
+
+<!--</script>-->
+<div id="demo1">
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+</div>
+<div id="demo2">
+    <input type="button" value="按钮"/>
+    <input type="button" value="按钮"/>
+</div>
+<script>
+   var demo = document.getElementById("demo2");
+    var inputs=demo.getElementsByTagName("input");
+    for(var i=0;i<inputs.length;i++){
+        var input=inputs[i];
+        input.onclick=function(){
+            alert("其实，我是个好人");
+        };
+    };
+</script>
+</body>
+</html>

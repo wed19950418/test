@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			width: 249px;
+			height: 189px;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		.box a {
+			width: 19px;
+			height: 19px;
+			background: url(close-banner.png) no-repeat;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<img src="banner.jpg" alt="">
+		<a href="javascript:;" id="close"></a>
+	</div>
+	<script type="text/javascript">
+		//事件三要素  事件源.事件 = { 事件处理程序 }
+		$("close").onclick = function (){
+			// 将父盒子元素隐藏掉
+			$("box").style.display = "none";
+		}
+
+
+		// 封装一个通过id找到元素的方法
+		function $(id) {
+			return document.getElementById(id);
+		}
+	</script>
+</body>
+</html>

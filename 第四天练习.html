@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+     <script>
+         //工厂函数;
+//         function createstudent(name,age,sex){
+//             var stu = new Object();
+//             stu.name=name;
+//             stu.age=age;
+//             stu.sex=sex;
+//             stu.sayHi=function(){
+//                 console.log("大家好，我是"+this.name);
+//             };
+//             stu.sayHi();
+//             return stu;
+//         }
+//         console.log(createstudent("zs",18,"男"));
+//         console.log(createstudent("ls",20,"女"));
+//         console.log(createstudent("ww",25,"不男不女"));
+
+//         构造函数new this;
+//         function Student(name,age,sex){
+//             var stu = new Object();
+//             this.name=name;
+//             this.age=age;
+//             this.sex=sex;
+//             this.sayHi=function(){
+//                 console.log("大家好，我是"+this.name);
+//             };
+//             stu.sayHi();
+//             return stu;
+//         }
+//         console.log(new Student("zs",20,"女"));
+//         console.log(new Student("zs",20,"女") instanceof Student);true!!!
+//         console.log([] instanceof Student);false!!1
+//         全局;
+//         var obj ={
+//            fn:function(){
+//                console.log(this);
+//            }
+//         }
+//        obj.fn();
+//         上下文;
+//         function fn2(){
+//             console.log(this);
+//         }
+//         fn2();
+//         window.fn2();
+//        基本类型的引用
+//         function Person(name,age){
+//             this.name=name;
+//             this.age=age;
+//         }
+//         var s1 = new Person("ls",20);
+//         var s2 = s1;
+//         s1.name="zs";
+//         s1.age=25;
+//         console.log(s1.age);
+//         console.log(s2.name);
+
+//         值类型做参数;
+//         var num = 10;
+//         function fn1(){
+//             num2=20;
+//             console.log(num2);
+//         }
+//         fn1();
+//         console.log(num);
+//         引用类型做参数;
+//            function Person(name,age){
+//                this.name=name;
+//                this.age=age;
+//            }
+//            function fl(p){
+//                p.name="呵呵哒";
+//                console.log(p.name);
+//            }
+//            var p1 = new Person("王二栋",25);
+//            console.log(p1.name);
+//            fl(p1);
+//            console.log(p1.name);
+
+//            function Person(name,age){
+//                this.name=name;
+//                this.age=age;
+//            }
+//            function fl(p){
+//                p = new Person("ls",20)
+//                p.name="二";
+//                console.log(p.name);
+//            }
+//            var p2=new Person("王",18);
+//            console.log(p2.name);
+//            fl(p2);
+//            console.log(p2.name);
+//            数组
+//            var arr = [1, 2, 3, 4, 5];
+//         console.log(arr);
+//         console.log(arr.valueOf());
+//         console.log(arr.toString());
+//         console.log(arr.join());
+//         console.log(arr.join("+"));
+//         console.log(arr.join(""));
+//         console.log(arr instanceof Array);true!!!
+//         console.log({} instanceof Array);false!!!
+//         console.log(Array.isArray(arr));
+//         console.log(Array.isArray({}));
+//         console.log(Array.isArray([]));
+//         console.log(Array.isArray(1,2,3,4,5));
+
+//        数组的增删方法
+//         var arr = [1,2,3,4,5];
+//         console.log(arr);
+//         arr.push(0,1,2,3)
+//         console.log(arr);//从后面添加元素 返回新数组的长度
+//         arr.pop()
+//         console.log(arr); //从后面删除元素 返回被删除的元素
+//         arr.unshift(1,2,3)
+//         console.log(arr);//从前面添加元素 返回新数组的长度
+//         arr.shift()
+//         console.log(arr);//从前面删除元素 返回被删除的元素
+
+//         将一个字符串数组输出为用|分割的字符串，如 ["刘备", "张飞", "关羽"] 变为 "刘备|张飞|关羽"。（两种方式）
+//            var arr = ["刘备", "张飞", "关羽"];
+//            var newArr = [];
+//            var fn=function(){
+//                newArr[newArr.length]=arr["刘备"+"|"+ "张飞"+"|"+ "关羽"];
+//            }
+//            fn();
+//            console.log(newArr);错误！！！
+
+//          数组的join方法;
+//         var arr = ["刘备", "张飞", "关羽"];
+//         function join(arr,pet){
+//             var str = arr[0];
+//             for(var i=1;i<arr.length;i++){
+//                 str = str + pet + arr[i];
+//             }
+//             return str;
+//         }
+//         console.log(join(arr,"|"));
+//         console.log(arr.join("|"));
+//
+         //将字符串数组的顺序进行反转。["a","b","c","d"]变为["d","c","b","a"]。（三种方式）
+//         数组反转!!!
+//        var arr = ["a","b","c","d"];
+//        console.log(arr);
+//        var newArr = [];
+//        for(var i=arr.length-1;i>=0;i--){
+//             newArr[newArr.length]=arr[i];
+////         newArr.push(arr[i]);
+//        }
+//        console.log(newArr);
+//        数组反转函数!!!
+//         使用往后面添加元素push!!!
+//         var arr = ["a", "b", "c", "d"];
+//         console.log(arr);
+//         function reverse(){
+//             var newArr = [];
+//            for(var i=arr.length-1;i>=0;i--){
+//                newArr.push(arr[i]);
+//            }
+//             return newArr;
+//         }
+//         console.log(reverse());
+
+//         使用往前面添加元素unshift!!!
+//         var arr = ["a", "b", "c", "d"];
+//         console.log(arr);
+//         var newArr = [];
+//         for(var i=0;i<arr.length;i++){
+//             newArr.unshift(arr[i]);
+//         }
+//         console.log(newArr);
+
+
+         //         对调！！！
+//         var arr = ["a", "b", "c", "d"];
+//         console.log(arr);
+//         for(var i=0;i<arr.length/2;i++){
+//             var temp = arr[i];
+//             arr[i]=arr[arr.length-1-i];
+//             arr[arr.length-1-i]=temp;
+//         }
+//         console.log(arr);
+//         对调函数封装
+//         var arr = ["a", "b", "c", "d"];
+//         console.log(arr);
+//         function reverse(arr){
+//             for(var i=0;i<arr.length/2;i++){
+//                 var temp = arr[i];
+//                 arr[i]=arr[arr.length-1-i];
+//                 arr[arr.length-1-i]=temp;
+//             }
+//             return arr;
+////             console.log(arr);
+//         }
+//         console.log(reverse(arr));
+
+         //工资的数组[1500,1200,2000,2100,1800]把工资大于等于2000的删除
+//         var arr = [1500, 1200, 2000, 2100, 1800];
+//         console.log(arr);
+////         MDN网站!!
+//         var newArr=arr.filter(function(element,index,array){
+////             console.log(element);
+////             console.log(index);
+////             console.log(array);
+//             if(element>=2000){
+//                 return false;
+//             }
+//             return true;
+//         })
+//         console.log(newArr);
+
+         //["c", "a", "z", "a", "x", "a"]找到数组中第一个a出现的位置
+         //["c", "a", "z", "a", "x", "a"]找到数组中最后一个a出现的位置
+         //["c", "a", "z", "a", "x", "a"]找到数组中每一个a出现的位置
+//         数组的位置方法
+//         var arr = ["c", "a", "z", "a", "x", "a"];
+//         console.log(arr.indexOf("a"));
+//         console.log(arr.lastIndexOf("a"));
+//         var index=-1;
+//         do{
+//             index =arr.indexOf("a",index+1);
+//             console.log(index);
+//         }while(index!==-1);
+
+         //["c", "a", "z", "a", "x", "a"]获取数组中每个元素出现的次数
+//         var arr = ["c", "a", "z", "a", "x", "a"];
+//         var o ={};
+//         for(var i = 0;i < arr.length ; i++){
+//             var temp = arr[i];
+//             if(o[temp]){
+//                 o[temp]=o[temp]+1;
+//             }
+//             else{
+//                 o[temp]=1;
+//             }
+//         }
+//         console.log(o);
+//        for(var k in o){
+//            console.log(k+"出现了"+o[k]+"次");
+//        }
+         //从数组中截取一个新的数组,返回新的数组
+         //删除和替换数组中的一部分
+         //对一个数组进行循环遍历
+//         var arr = [4, 6, 7, 8, 3, 46, 8];
+//         console.log(arr);
+//         console.log(arr.slice(0,2));
+//         console.log(arr.splice(0, 2));
+//         console.log(arr.slice(1,2));
+//         console.log(arr.splice(1, 2));
+//         console.log(arr.splice(0, 2,"a","b","C"));
+//         console.log(arr);
+//         var arr = [4, 6, 7, 8, 3, 46, 8];
+//            for(var i = 0;i<arr.length;i++){
+//                console.log(arr[i]);
+//            }
+//            arr.forEach(function(e){
+//                console.log(e);
+//            })
+//         arr.forEach(function(element,index,array){
+////             console.log(element);
+////             console.log(index);
+//             console.log(array);
+//         })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

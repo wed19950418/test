@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .cls {
+            list-style: none;
+            width: 150px;
+            margin: 0;
+            padding: 0;
+            background-color: yellowgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="创建"/>
+
+<div id="box"></div>
+<script>
+    var phones = ["小米", "华为", "中兴", "苹果", "三星", "魅族"];
+    var box = document.getElementById("box");
+    var btn =document.getElementById("btn");
+    btn.onclick=function(){
+        //一进来先检测 如果页面上已经有了 就返回 没有才追加
+        var t = document.getElementById("t");
+        //如果有 是对象 如果没有 是null
+        if(t){
+            //如果能进来说明有了 就不再重复创建了
+            return;
+        }
+        var ul=document.createElement("ul");
+        ul.className="cls";
+        ul.id="t";
+        box.appendChild(ul);
+        for(var i=0;i<phones.length;i++){
+            var phone = phones[i];
+            var li = document.createElement("li");
+            li.innerHTML=phone;
+            ul.appendChild(li);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var btn =document.getElementById("btn");
+//    var box =document.getElementById("box");
+//    var phones = ["小米", "华为", "中兴", "苹果", "三星", "魅族"];
+//    btn.onclick=function(){
+//        var t = document.getElementById("t");
+//        if(t){
+//            return;
+//        }
+//        var ul=document.createElement("ul");
+//        ul.className="cls";
+//        ul.id="t";
+//        box.appendChild(ul);
+//        for(var i = 0;i<phones.length;i++){
+//            var phone=phones[i];
+//            var li=document.createElement("li");
+//            li.innerHTML=phone;
+//            ul.appendChild(li);
+//        }
+//    }
+</script>
+</body>
+</html>

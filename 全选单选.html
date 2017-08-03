@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_cbAll"/>
+            </th>
+            <th>手机品牌</th>
+            <th>价格</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>iphone7</td>
+            <td>6599</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>小米Max</td>
+            <td>3799</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>华为荣耀V9</td>
+            <td>2999</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>vivo X7</td>
+            <td>2300</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    //找人
+    var j_cbAll=document.getElementById("j_cbAll");
+    var j_tb=document.getElementById("j_tb");
+    var checkboxs=j_tb.getElementsByTagName("input");
+    //需求：当点击上面按钮时 下面按钮都选中 当下面所有按钮都选中时 上面按钮也选中
+    //点击上面下面都算选中
+    j_cbAll.onclick=function(){
+        for(var i=0;i<checkboxs.length;i++){
+            checkboxs[i].checked=j_cbAll.checked;
+        }
+    }
+    //下面全部选中后上面也选中
+    for(var i=0;i<checkboxs.length;i++){
+        checkboxs[i].onclick=function(){
+            var ischeckedAll=true;//假如是真的
+            for(var i=0;i<checkboxs.length;i++){
+                if(checkboxs[i].checked!==true){
+                    ischeckedAll=false;
+                    break;
+                }
+            }
+            j_cbAll.checked=ischeckedAll;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" value="请输入短信验证码"/>
+<input type="button" value="点击发送验证码" id="btn"/>
+<script>
+    //需求：点击按钮 按钮中文字显示倒计时 倒计时后又恢复可以点击的状态
+    var timer;
+    var num=5;
+    var btn = document.getElementById("btn");
+    btn.onclick=function(){
+        this.disabled=true;
+    timer=setInterval(function(){
+        num--;
+        btn.value=num+"秒后可以重发";
+        if(num===0){
+            //如果到了0就恢复可以点击的状态
+            clearInterval(timer);//清理定时器
+            btn.disabled=false;//恢复禁用状态
+            btn.value="点击发送验证码";//恢复短信重发验证码
+            num=5;//恢复时间
+        }
+    },1000)
+    }
+</script>
+</body>
+</html>
